@@ -1,0 +1,15 @@
+ode_modules/
+dist/
+dist-ssr/
+.env
+.env.local
+.env.*.local
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+*.tsbuildinfo
+.vscode/
+.idea/
+.DS_Store
+*.log
