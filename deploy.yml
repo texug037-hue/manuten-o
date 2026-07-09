@@ -1,0 +1,23 @@
+name: Publicar no Firebase Hosting
+
+# Roda sozinho toda vez que algo for enviado (push) para a branch "main".
+# Não tem nenhum passo de "instalar" ou "compilar" porque o app inteiro
+# é um único arquivo index.html, publicado exatamente como está.
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Publicar no Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live
+          projectId: manutencao-57663
