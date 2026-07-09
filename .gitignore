@@ -1,0 +1,24 @@
+# dependências
+node_modules/
+
+# build
+dist/
+dist-ssr/
+
+# variáveis de ambiente com as chaves reais (NUNCA subir isso)
+.env
+.env.local
+.env.*.local
+
+# firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+*.tsbuildinfo
+
+# editor / sistema
+.vscode/
+.idea/
+.DS_Store
+*.log
